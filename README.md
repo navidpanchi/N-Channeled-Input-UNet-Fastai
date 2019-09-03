@@ -1,7 +1,7 @@
 # N-Channeled-Input-UNet-Fastai
 This Repository contains a modified version of unet_learner function from fastai library which you can use to define a unet with more/less number of channels than 3 (Default in all ResNet like networks). Sometimes datasets contain non ImageNet like images, sometimes they don't even contain images as inputs, the input dimension might change in such cases. 
 
-I have tried to change the original function as little as possible. You should checkout the notebook in this repo for more complete example. You can just copy the code below and then use this `unet_learner` function with your dataset. It will detect the number of channels present in you input data and set the `input_channel` of the model to be those many channels. 
+I have tried to change the original function as little as possible (most of it is exactly same as original source code from fastai GitHub repository). You should checkout the notebook in this repo for more complete example. You can just copy the code below and then use this `unet_learner` function with your dataset. It will detect the number of channels present in you input data and set the `input_channel` of the model to be those many channels. 
 
 * **Note**  that if the number of channels is not 3 then the network won't be frozen as the first layer contains untrained weights. And I don't think there is much need of pretrianing in this case as the usage of this function would be in scenarios where the images/arrays are not Imagenet like*. 
 
