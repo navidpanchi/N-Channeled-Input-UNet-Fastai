@@ -5,7 +5,7 @@ I have tried to change the original function as little as possible (most of it i
 
 * **Note**  that if the number of channels is not 3 then the network won't be frozen as the first layer contains untrained weights. And I don't think there is much need of pretrianing in this case as the usage of this function would be in scenarios where the images/arrays are not Imagenet like*. 
 
-Be sure to check the [notebook](https://github.com/navidpanchi/N-Channeled-Input-UNet-Fastai/blob/master/N-Channeled-Input-UNet%20.ipynb) out for testing and give this repository a :star:. 
+Be sure to check the [notebook](https://github.com/navidpanchi/N-Channeled-Input-UNet-Fastai/blob/master/N-Channeled-Input-UNet%20.ipynb) out for testing.
 
 ```
 from fastai.vision import *
