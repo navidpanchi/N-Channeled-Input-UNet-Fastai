@@ -40,7 +40,9 @@ def unet_learner(data:DataBunch, arch:Callable, pretrained:bool=True, blur_final
           bottle=bottle), data.device)
     learn = Learner(data, model, **learn_kwargs)
     learn.split(ifnone(split_on, meta['split']))
-    if pretrained and n_input_channels == 3: learn.freeze()
-    apply_init(model[2], nn.init.kaiming_normal_)
+    if pretrained and n_input_channels == 3: 
+        learn.freeze()
+        apply_init(model[2], nn.init.kaiming_normal_)
+    else: apply_init(model, nn.init.kaiming_normal_)
     return learn
 ```
