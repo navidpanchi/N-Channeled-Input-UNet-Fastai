@@ -1,3 +1,5 @@
+**NOTE** This reporsitory is no longer maintained, and not updated to work with the latest version of fastai.
+
 # N-Channeled-Input-UNet-Fastai
 This Repository contains a modified version of unet_learner function from fastai library which you can use to define a unet with more/less number of channels than 3 (Default in all ResNet like networks). Sometimes datasets contain non ImageNet like images, sometimes they don't even contain images as inputs, the input dimension might change in such cases. 
 
